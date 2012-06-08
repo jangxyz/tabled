@@ -3,16 +3,18 @@ tabled
 
 print textual tabular data in organized form, regarding east asian width
 
-```python
+```sh
 $ cat testfile.tsv			# each space is TAB
 A	B	C
-abcdef	def	ghi
-한글	바보	멍텅구리야
+abcdefghi	def	ghi
+바보	멍텅구리야	한글
 
 $ python tabled.py testfile.tsv
-A         B       C         
-abcdef    def     ghi       
-한글      바보    멍텅구리야
+A            B             C   
+abcdefghi    def           ghi 
+바보         멍텅구리야    한글
+
+$ # looks even better in Terminal!
 ```
 
 
@@ -27,4 +29,5 @@ comes _width_: method to compute **east asian width**
 >>> tabled.width(u'ㅡㅡ?')
 5
 ```
-	
+
+
